@@ -7,6 +7,10 @@
         select * from user
     </select>
 
+    <select id="getUserLike" resultType="com.kuang.pojo.User">
+        select * from user where name like "%"#{name}"%"
+    </select>
+
     <select id="getUserById" resultType="com.kuang.pojo.User" parameterType="integer">
         select * from user where id = #{id}
     </select>

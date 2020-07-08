@@ -15,17 +15,17 @@ public class UserDaoTest {
 
 
     @Test
-    public void getUserList(){
+    public void getUserList() {
         SqlSession sqlSession = MybatisUtils.getSession();
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         List<User> userList = userDao.getUserList();
-        System.out.println(userList);
+        userList.forEach(System.out::println);
 
         sqlSession.close();
     }
 
     @Test
-    public void getUserLike(){
+    public void getUserLike() {
         SqlSession sqlSession = MybatisUtils.getSession();
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         List<User> userList = userDao.getUserLike("李");
@@ -36,7 +36,7 @@ public class UserDaoTest {
     }
 
     @Test
-    public void getUserById(){
+    public void getUserById() {
         SqlSession sqlSession = MybatisUtils.getSession();
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         User user = userDao.getUserById(1);
@@ -46,8 +46,8 @@ public class UserDaoTest {
     }
 
     @Test
-    public void addUser(){
-        User user = new User(4,"王五","999999");
+    public void addUser() {
+        User user = new User(4, "王五", "999999");
         SqlSession sqlSession = MybatisUtils.getSession();
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         Integer integer = userDao.addUser(user);
@@ -58,8 +58,8 @@ public class UserDaoTest {
     }
 
     @Test
-    public void updateUser(){
-        User user = new User(4,"赵四","888888");
+    public void updateUser() {
+        User user = new User(4, "赵四", "888888");
         SqlSession sqlSession = MybatisUtils.getSession();
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         Integer integer = userDao.updateUser(user);
@@ -70,7 +70,7 @@ public class UserDaoTest {
     }
 
     @Test
-    public void deleteUser(){
+    public void deleteUser() {
         SqlSession sqlSession = MybatisUtils.getSession();
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         Integer integer = userDao.deleteUser(4);
