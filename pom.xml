@@ -9,9 +9,13 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>mybatis01</module>
-        <module>mybatis02</module>
-        <module>mybatis03</module>
+        <module>mybatis01-初识</module>
+        <module>mybatis02-配置</module>
+        <module>mybatis03-实体映射</module>
+        <module>mybatis04-日志记录</module>
+        <module>mybatis05-注解开发</module>
+        <module>mybatis06-复杂查询多对一</module>
+        <module>mybatis07-复杂查询一对多</module>
     </modules>
 
     <dependencies>
