@@ -14,8 +14,8 @@
         select * from teacher where id = #{tid}
     </select>
     <resultMap id="TeacherStudent1" type="com.kuang.pojo.Teacher">
-        <result property="id" column="tid"/>
-        <result property="name" column="tname"/>
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
         <collection property="students" javaType="ArrayList" ofType="com.kuang.pojo.Student" select="getStudentByTeacherId" column="id"/>
     </resultMap>
 

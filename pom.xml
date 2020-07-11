@@ -16,6 +16,8 @@
         <module>mybatis05-注解开发</module>
         <module>mybatis06-复杂查询多对一</module>
         <module>mybatis07-复杂查询一对多</module>
+        <module>mybatis08-sql优化</module>
+        <module>mybatis09-缓存</module>
     </modules>
 
     <dependencies>
